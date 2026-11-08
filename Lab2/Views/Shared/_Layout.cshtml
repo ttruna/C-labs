@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <a class="brand" asp-controller="Home" asp-action="Index">Lab 2</a>
+        <a asp-controller="Home" asp-action="SprintTasks">Sprint Tasks</a>
+    </nav>
+    <main class="container">
+        @RenderBody()
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Greetings";
+
+    // messages are placed as variables
+    string morningMessage = "Good morning! Have a productive day.";
+    string eveningMessage = "Good evening! Time to relax.";
+    string dateLabel = "Today is";
+
+    DateTime now = DateTime.Now;
+
+    // branching: morning or evening
+    string greeting;
+    if (now.Hour < 12)
+    {
+        greeting = morningMessage;
+    }
+    else
+    {
+        greeting = eveningMessage;
+    }
+}
+
+<h1>@greeting</h1>
+
+<p>@dateLabel @now.ToString("dddd, d MMMM yyyy").</p>
+<p>Current time: @now.ToShortTimeString()</p>
+<p>Day of week: @now.DayOfWeek, day of year: @now.DayOfYear</p>
+<p>Tomorrow will be: @now.AddDays(1).ToShortDateString()</p>
+<p>Days left in this month: @(DateTime.DaysInMonth(now.Year, now.Month) - now.Day)</p>

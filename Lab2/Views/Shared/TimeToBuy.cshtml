@@ -1,0 +1,5 @@
+@inject ITimeService TimeService
+
+<div class="note">
+    Time to buy: @TimeService.GetTimeForTomorrow().ToString("dddd, d MMMM yyyy 'at' HH:mm")
+</div>

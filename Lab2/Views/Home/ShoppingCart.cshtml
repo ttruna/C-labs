@@ -1,0 +1,47 @@
+@model ShoppingCartViewModel
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<h1>Shopping Cart</h1>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <div class="message">@Model.Message</div>
+}
+
+@using (Html.BeginForm("ShoppingCart", "Home", FormMethod.Post))
+{
+    <div class="field">
+        <label for="CustomerName">Your name</label>
+        @Html.TextBox("CustomerName", Model.CustomerName)
+    </div>
+
+    <div class="field">
+        <label for="Address">Address</label>
+        @Html.TextBox("Address", Model.Address)
+    </div>
+
+    <div class="field">
+        <label for="Supermarket">Supermarket</label>
+        @Html.DropDownList("Supermarket", Model.Supermarkets)
+    </div>
+
+    <div class="field">
+        <label>Ship date</label>
+        @foreach (var d in Model.ShipDates)
+        {
+            <label class="inline">
+                @Html.RadioButton("ShipDate", d.Value, d.Value == Model.ShipDate)
+                @d.Text
+            </label>
+        }
+    </div>
+
+    <div class="field">
+        <label for="Products">Products (Ctrl/Cmd + click for several)</label>
+        @Html.ListBox("Products", Model.ProductItems, new { size = 5 })
+    </div>
+
+    <input type="submit" value="Place order" />
+}
