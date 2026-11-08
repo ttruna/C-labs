@@ -4,11 +4,12 @@
 |---|---|---|
 | 1 | Трикутники (ASP.NET Core MVC) | `Lab1/` |
 | 2 | Sprint Tasks (Razor views) | `Lab2/` |
+| 3 | Products (CRUD, filter, admin) | `Lab3/` |
 
 ## Запуск
 
 ```bash
 cd Lab1 && dotnet run   # Лабораторна 1
 cd Lab2 && dotnet run   # Лабораторна 2
+cd Lab3 && dotnet run   # Лабораторна 3
 ```
-| 3 | Products (CRUD, filter, admin) | `Lab3/` |
