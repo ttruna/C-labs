@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<h1>Admin area</h1>
+
+@* The key is sent in the request BODY (POST), so it never appears in the URL. *@
+<form method="post" action="@Url.Content("~/users/index")">
+    <div class="field">
+        <label for="key">Admin key</label>
+        <input type="password" id="key" name="key" />
+    </div>
+    <input type="submit" value="Show users" />
+</form>

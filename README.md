@@ -11,3 +11,4 @@
 cd Lab1 && dotnet run   # Лабораторна 1
 cd Lab2 && dotnet run   # Лабораторна 2
 ```
+| 3 | Products (CRUD, filter, admin) | `Lab3/` |

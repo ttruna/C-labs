@@ -1,0 +1,19 @@
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #222; }
+.navbar { background: #001f4d; padding: 12px 24px; display: flex; gap: 24px; }
+.navbar a { color: #fff; text-decoration: none; font-weight: bold; }
+.navbar a:hover { text-decoration: underline; }
+.container { padding: 24px; max-width: 900px; }
+.table { border-collapse: collapse; min-width: 420px; }
+.table th, .table td { border: 1px solid #ccc; padding: 6px 12px; text-align: left; }
+.table th { background: #eef2fa; }
+.actions a { margin-right: 10px; }
+.filter { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+.filter input[type=text], .filter input[type=number], .filter select { padding: 6px; }
+.field { margin-bottom: 14px; }
+.field > label { display: block; font-weight: bold; margin-bottom: 4px; }
+.field input, .field textarea { padding: 6px; min-width: 280px; }
+.error { color: #b00020; margin-left: 8px; }
+dt { font-weight: bold; margin-top: 8px; }
+dd { margin-left: 0; }
+input[type=submit] { background: #001f4d; color: #fff; border: 0; padding: 9px 18px; border-radius: 4px; cursor: pointer; margin-right: 10px; }
+input[type=submit].danger { background: #b00020; }
